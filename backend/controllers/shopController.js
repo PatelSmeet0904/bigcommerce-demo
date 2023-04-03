@@ -54,7 +54,7 @@ const auth_callback = async (req, res) => {
 // @access  Private
 const load = async (req, res) => {
   try {
-    // await subscribeWebhook(access_token);
+    await subscribeWebhook(req.shop.token);
     return res.json({ type: "load", data: req.shop });
   } catch (error) {
     res.status(400).json({ Message: error.message });

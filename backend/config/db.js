@@ -34,7 +34,13 @@ db.sequelize = sequelize;
 // db.shops = require("../model/shopModel.js")(sequelize, DataTypes);
 db.shops = require("../model/shop.model.js")(sequelize);
 db.pricePlans = require("../model/pricingPlans.model")(sequelize);
-db.orders = require("../model/orderModel.js")(sequelize, DataTypes);
+db.insurance_plans = require("../model/insurancePlans.model")(sequelize);
+db.orders = require("../model/orders.model.js")(sequelize);
+db.order_addresses = require("../model/orderAddress.model.js")(sequelize);
+db.order_lineitems = require("../model/orderLineItems.model")(sequelize);
+db.order_fulfillments = require("../model/orderFullfillments.model.js")(
+  sequelize
+);
 
 db.sequelize.sync({ alter: true }).then(() => {
   console.log("yes re-sync done!");
