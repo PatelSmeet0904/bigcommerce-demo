@@ -69,8 +69,11 @@ const updateOrder = async (req, res) => {
 
     // for (const product of orderLineItemsData) {
     //   if (product.product_id === shop.product_id) {
+    //  const variant = await Variant.findOne({
+    //    where: { variant_id: product.variant_id },
+    //  });
     //     // // Store the order data in your database using Sequelize
-    //     await createOrUpdateOrder(shop, orderId, orderLineItemsData);
+    //     await createOrUpdateOrder(shop, orderId, orderLineItemsData, variant);
     //   }
     // }
 
